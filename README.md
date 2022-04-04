@@ -41,7 +41,7 @@ This is who developed this project:
 <table>
   <tr>
     <td align="center">
-      <a href="#">
+      <a href="https://github.com/larkingz01">
         <img src="https://scontent.fbkk5-3.fna.fbcdn.net/v/t1.6435-9/196461751_1911170919051660_5980229829981814581_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHw7KT6Df8hKiLZ1NjbtO2UoQAym5Xhey-hADKbleF7LwjoAo4J31XnuNoUuZWdTwjuNQgYKUv3be5vHOlGfOIv&_nc_ohc=l-6sflSDGyUAX_gE9BU&tn=Fg0pRutN-1QS4-57&_nc_ht=scontent.fbkk5-3.fna&oh=00_AT8Z5pTR4VXL5-co8zvLA0bV53GL89UcJQsGEaLv1KMEsA&oe=62723CE3" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
         <sub>
           <b>Jakarin Larking Yensuk</b>
@@ -66,14 +66,3 @@ This is who developed this project:
     </td>
   </tr>
 </table>
-
-
-## 😄 Seja um dos contribuidores<br>
-
-Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.
-
-## 📝 Licença
-
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
-
-[⬆ Voltar ao topo](#nome-do-projeto)<br>
