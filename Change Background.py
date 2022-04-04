@@ -28,7 +28,7 @@ def create_trackbar():
 
 def linenotify(message, path):
     url = 'https://notify-api.line.me/api/notify'
-    token = 'Dn7jX79Ak82Tl10zaS3V1OrMcZl5MJIPHZx9ymzfofo' # Line Notify Token
+    token = 'xxxxxxxxxxxxxxxxxxxxxxxxx' # Line Notify Token
     img = {'imageFile': open(path,'rb')} #Local picture File
     data = {'message': message}
     headers = {'Authorization':'Bearer ' + token}
