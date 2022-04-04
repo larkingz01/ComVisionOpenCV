@@ -1,82 +1,50 @@
-# # Nome do projeto
+# Computer Vision OpenCV project
 
-<!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
+<!---This project is the part of Computer Vision Subject in faculty of information technology, KMITL--->
 
-![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
+> This project is the part of Computer Vision Subject in faculty of information technology, KMITL.
 
-<img src="exemplo-image.png" alt="exemplo imagem">
+### Features
 
-> Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler.
+O This project is very simple so this is things that we made:
 
-### Ajustes e melhorias
+- [1] Change Background color
+- [2] Change Background image
+- [3] Capture image
+- [4] Send line notification when capture image
+- [5] Coming soon...
 
-O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-- [x] Tarefa 1
-- [x] Tarefa 2
-- [x] Tarefa 3
-- [ ] Tarefa 4
-- [ ] Tarefa 5
+## 🚀 Installation requried:
 
-## 💻 Pré-requisitos
-
-Antes de começar, verifique se você atendeu aos seguintes requisitos:
-<!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
-* Você instalou a versão mais recente de `<linguagem / dependência / requeridos>`
-* Você tem uma máquina `<Windows / Linux / Mac>`. Indique qual sistema operacional é compatível / não compatível.
-* Você leu `<guia / link / documentação_relacionada_ao_projeto>`.
-
-## 🚀 Instalando <nome_do_projeto>
-
-Para instalar o <nome_do_projeto>, siga estas etapas:
-
-Linux e macOS:
-```
-<comando_de_instalação>
-```
+You have to install these:
 
 Windows:
 ```
-<comando_de_instalação>
+pip install opencv
+pip install cvzone
+pip install requests
 ```
 
-## ☕ Usando <nome_do_projeto>
+## 📫 How to slove some problems
+If you have any problem while running maybe these can help:
 
-Para usar <nome_do_projeto>, siga estas etapas:
+1. Change line token to yours.
+2. Check path of Background folder.
+3. Check path of saved image.
 
-```
-<exemplo_de_uso>
-```
-
-Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Fornece uma referência de opções para pontos de bônus!
-
-## 📫 Contribuindo para <nome_do_projeto>
-<!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
-Para contribuir com <nome_do_projeto>, siga estas etapas:
-
-1. Bifurque este repositório.
-2. Crie um branch: `git checkout -b <nome_branch>`.
-3. Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
-4. Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
-5. Crie a solicitação de pull.
-
-Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 ## 🤝 Colaboradores
 
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
+This is who developed this project:
 
 <table>
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars3.githubusercontent.com/u/31936044" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <img src="https://scontent.fbkk5-3.fna.fbcdn.net/v/t1.6435-9/196461751_1911170919051660_5980229829981814581_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHw7KT6Df8hKiLZ1NjbtO2UoQAym5Xhey-hADKbleF7LwjoAo4J31XnuNoUuZWdTwjuNQgYKUv3be5vHOlGfOIv&_nc_ohc=l-6sflSDGyUAX_gE9BU&tn=Fg0pRutN-1QS4-57&_nc_ht=scontent.fbkk5-3.fna&oh=00_AT8Z5pTR4VXL5-co8zvLA0bV53GL89UcJQsGEaLv1KMEsA&oe=62723CE3" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
         <sub>
-          <b>Iuri Silva</b>
+          <b>Jakarin Larking Yensuk</b>
         </sub>
       </a>
     </td>
