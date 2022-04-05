@@ -63,7 +63,7 @@ This is who developed this project:
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://miro.medium.com/max/360/0*1SkS3mSorArvY9kS.jpg" width="100px;" alt="Foto do Steve Jobs"/><br>
+        <img src="https://scontent.fbkk2-8.fna.fbcdn.net/v/t39.30808-6/278004158_5357431097654857_2033120546815710241_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeG_6jW1oydmpahetpnEuHXUyutaH2E3iIbK61ofYTeIhlhlk4ZjaoIDG73bZng1Ru484l_Ex0DYibWt8WkWJWpC&_nc_ohc=iVLyF_B7tqUAX8AepRe&_nc_ht=scontent.fbkk2-8.fna&oh=00_AT9aafB8zFfWkDfqDAvcRnj-darklq8WFPH2azLJ8mJglQ&oe=6251496A" width="100px;" alt="Foto do Steve Jobs"/><br>
         <sub>
           <b>Woranun Wareeprasert</b>
         </sub>
