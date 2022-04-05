@@ -39,7 +39,7 @@ If you have any problem while running maybe these can help:
 3. Check path of saved image.
 
 
-## 🤝 Colaboradores
+## 🤝 Colaborators
 
 This is who developed this project:
 
