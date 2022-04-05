@@ -55,7 +55,7 @@ This is who developed this project:
     </td>
     <td align="center">
       <a href="https://github.com/64070145Rosjana">
-        <img src="https://s2.glbimg.com/FUcw2usZfSTL6yCCGj3L3v3SpJ8=/smart/e.glbimg.com/og/ed/f/original/2019/04/25/zuckerberg_podcast.jpg" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <img src="https://scontent.fbkk22-3.fna.fbcdn.net/v/t39.30808-6/269874086_3106655866248059_2366126768363700267_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeGHu1Akh-JfqtD2myl6HwgW2fACXmmfcdTZ8AJeaZ9x1BHIWBrXE5e47tmA9gUF0Gk3tjbdqnfq6K8BJolW6yQo&_nc_ohc=QzF9R6vc3BwAX-MmKvM&_nc_ht=scontent.fbkk22-3.fna&oh=00_AT9OEZw1PHNol3IMM-tGV_ZcsxyNB26rqo73puuULlX_eA&oe=6250C457" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
         <sub>
           <b>Rosjana Homprasit </b>
         </sub>
