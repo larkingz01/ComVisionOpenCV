@@ -5,8 +5,7 @@
 > This project is the part of Computer Vision Subject in faculty of information technology, KMITL.
 
 ### Features
-
-O This project is very simple so this is things that we made:
+This project is very simple so this is things that we made:
 
 - [1] Change Background color
 - [2] Change Background image
@@ -24,6 +23,12 @@ Windows:
 pip install opencv
 pip install cvzone
 pip install requests
+```
+Mac:
+```
+pip install opencv-python
+pip install cvzone-python
+pip install requests-python
 ```
 
 ## 📫 How to slove some problems
