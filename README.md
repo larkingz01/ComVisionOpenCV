@@ -7,11 +7,20 @@
 ### Features
 This project is very simple so this is things that we made:
 
-- [1] Change Background color
-- [2] Change Background image
+- [1] Change Background color mode
+- [2] Change Background image mode
 - [3] Capture image
 - [4] Send line notification when capture image
 - [5] Coming soon...
+
+
+### Command
+- [s] save picture
+- [a] change to previous background (background image mode only)
+- [d] change to next background (background image mode only)
+- [m] swap mode
+- [i] insert user's image
+- [q] exit program
 
 
 ## 🚀 Installation requried:
