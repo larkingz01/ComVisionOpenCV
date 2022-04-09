@@ -11,7 +11,7 @@ from tkinter import filedialog
 def nothing(x):
     pass
 
-def get_path():
+def insert_img():
     root = Tk()
     root.withdraw()
     pic_path = filedialog.askopenfilename(filetypes=[
@@ -23,7 +23,7 @@ def get_path():
         root.destroy()
 
 def rescale_frame(frame, percent=50):
-    width = int(frame.shape[1] * percent / 100)
+    width = int(frame.shape[1] * percent / 100) 
     height = int(frame.shape[0] * percent / 100)
     dim = (width, height)
     return cv2.resize(frame, dim, interpolation=cv2.INTER_AREA)
@@ -127,7 +127,13 @@ def main():
         if key_press == ord('m'):
             mode = not mode
         if key_press == ord('i'):
-            get_path()
+            insert_img()
+            imgList.clear()
+            listImg = os.listdir("BackgroundImages")
+            for imgPath in listImg:
+                img = cv2.imread(f'BackgroundImages/{imgPath}')
+                imgList.append(img)
+
     cap.release()
     cv2.destroyAllWindows()
 
