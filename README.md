@@ -28,6 +28,7 @@ Mac:
 ```
 pip install opencv-python
 pip install cvzone-python
+pip install mediapipe
 pip install requests-python
 ```
 
