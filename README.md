@@ -22,13 +22,14 @@ Windows:
 ```
 pip install opencv
 pip install cvzone
+pip install mediapipe
 pip install requests
 ```
 Mac:
 ```
 pip install opencv-python
 pip install cvzone-python
-pip install mediapipe
+pip install mediapipe-python
 pip install requests-python
 ```
 
