@@ -1,8 +1,8 @@
 import os
-from cv2 import WINDOW_NORMAL, line
 import cvzone
 import cv2
 import requests
+from cv2 import WINDOW_NORMAL, line
 from cvzone.SelfiSegmentationModule import SelfiSegmentation
 from datetime import date
 from tkinter import *
@@ -10,6 +10,17 @@ from tkinter import filedialog
 
 def nothing(x):
     pass
+
+
+def get_background():
+    listImg = os.listdir("BackgroundImages")
+    imgList = []
+
+    for imgPath in listImg:
+        img = cv2.imread(f'BackgroundImages/{imgPath}')
+        imgList.append(img)
+    return imgList
+
 
 def insert_img():
     root = Tk()
@@ -66,12 +77,7 @@ def main():
 
     segmentor = SelfiSegmentation()
 
-    listImg = os.listdir("BackgroundImages")
-    imgList = []
-
-    for imgPath in listImg:
-        img = cv2.imread(f'BackgroundImages/{imgPath}')
-        imgList.append(img)
+    imgList = get_background()
     indexImg = 0
 
     while True:
@@ -119,9 +125,14 @@ def main():
             break
         if key_press == ord('s'):
             img_name = "{}_P{}.png".format(today, img_counter)
-            cv2.imwrite(img_name, img_out)
-            print("{} is written!".format(img_name))
-            linenotify(img_name+" is captured.", "./"+img_name)
+            if os.path.exists('CapturedImages'):
+                cv2.imwrite('CapturedImages/'+img_name, img_out)
+                print("{} is written!".format(img_name))
+            else:
+                os.mkdir('CapturedImages')
+                cv2.imwrite('CapturedImages/'+img_name, img_out)
+                print("{} is written!".format(img_name))
+            linenotify(img_name+" is captured.", "CapturedImages/"+img_name)
             img_counter += 1
 
         if key_press == ord('m'):
@@ -129,12 +140,8 @@ def main():
         if key_press == ord('i'):
             insert_img()
             imgList.clear()
-            listImg = os.listdir("BackgroundImages")
-            for imgPath in listImg:
-                img = cv2.imread(f'BackgroundImages/{imgPath}')
-                imgList.append(img)
+            imgList = get_background()
             indexImg = len(imgList) - 1
-   
     cap.release()
     cv2.destroyAllWindows()
 
