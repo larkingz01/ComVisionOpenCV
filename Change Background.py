@@ -125,13 +125,10 @@ def main():
             break
         if key_press == ord('s'):
             img_name = "{}_P{}.png".format(today, img_counter)
-            if os.path.exists('CapturedImages'):
-                cv2.imwrite('CapturedImages/'+img_name, img_out)
-                print("{} is written!".format(img_name))
-            else:
+            if not os.path.exists('CapturedImages'):
                 os.mkdir('CapturedImages')
-                cv2.imwrite('CapturedImages/'+img_name, img_out)
-                print("{} is written!".format(img_name))
+            cv2.imwrite('CapturedImages/'+img_name, img_out)
+            print("{} is written!".format(img_name))
             linenotify(img_name+" is captured.", "CapturedImages/"+img_name)
             img_counter += 1
 
