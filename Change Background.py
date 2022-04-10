@@ -133,7 +133,8 @@ def main():
             for imgPath in listImg:
                 img = cv2.imread(f'BackgroundImages/{imgPath}')
                 imgList.append(img)
-
+            indexImg = len(imgList) - 1
+   
     cap.release()
     cv2.destroyAllWindows()
 
