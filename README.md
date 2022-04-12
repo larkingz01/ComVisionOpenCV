@@ -19,7 +19,7 @@ This project is very simple so this is things that we made:
 - [a] change to previous background (background image mode only)
 - [d] change to next background (background image mode only)
 - [m] swap mode
-- [i] insert user's image
+- [i] upload user's image
 - [q] exit program
 
 
