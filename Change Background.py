@@ -1,9 +1,12 @@
 import os
 import cvzone
 import cv2
+import time
+from numpy import true_divide
 import requests
 from cv2 import WINDOW_NORMAL, line
 from cvzone.SelfiSegmentationModule import SelfiSegmentation
+from cvzone.HandTrackingModule import HandDetector
 from datetime import date
 from tkinter import *
 from tkinter import filedialog
@@ -53,17 +56,24 @@ def create_trackbar():
 
 def linenotify(message, path):
     url = 'https://notify-api.line.me/api/notify'
-    token = 'Dn7jX79Ak82Tl10zaS3V1OrMcZl5MJIPHZx9ymzfofo'  # Line Notify Token
-    img = {'imageFile': open(path, 'rb')}  # Local picture File
+    token = 'Dn7jX79Ak82Tl10zaS3V1OrMcZl5MJIPHZx9ymzfofo' 
+    img = {'imageFile': open(path, 'rb')}
     data = {'message': message}
     headers = {'Authorization': 'Bearer ' + token}
     session = requests.Session()
     session_post = session.post(url, headers=headers, files=img, data=data)
     print(session_post.text)
 
-
-def main():
+def captured(img_counter, img_out):
     today = date.today()
+    img_name = "{}_P{}.png".format(today, img_counter)
+    if not os.path.exists('CapturedImages'):
+        os.mkdir('CapturedImages')
+    cv2.imwrite('CapturedImages/'+img_name, img_out)
+    print("{} is written!".format(img_name))
+    linenotify(img_name+" is captured.", "CapturedImages/"+img_name)
+def main():
+    finger_check = False
     img_counter = 1
     mode = False
     trackbar_check = False
@@ -80,9 +90,12 @@ def main():
     imgList = get_background()
     indexImg = 0
 
+    detector = HandDetector(detectionCon=0.8, maxHands=2)
     while True:
         _, img = cap.read()
         img = rescale_frame(img, percent=50)
+        imgHand = img.copy()
+        hands, _ = detector.findHands(imgHand)
 
         background = cv2.resize(imgList[indexImg], (int(img.shape[1]), int(
             img.shape[0])), interpolation=cv2.INTER_AREA)
@@ -124,14 +137,15 @@ def main():
         if key_press == ord('q'):
             break
         if key_press == ord('s'):
-            img_name = "{}_P{}.png".format(today, img_counter)
-            if not os.path.exists('CapturedImages'):
-                os.mkdir('CapturedImages')
-            cv2.imwrite('CapturedImages/'+img_name, img_out)
-            print("{} is written!".format(img_name))
-            linenotify(img_name+" is captured.", "CapturedImages/"+img_name)
+            captured(img_counter, img_out)
             img_counter += 1
-
+        if hands:
+            if detector.fingersUp(hands[0]) == [1, 1, 1, 1, 1]:
+                finger_check = True
+            if finger_check and detector.fingersUp(hands[0]) == [0, 0, 0, 0, 0]:
+                captured(img_counter, img_out)
+                img_counter += 1
+                finger_check = False
         if key_press == ord('m'):
             mode = not mode
         if key_press == ord('i'):
@@ -139,6 +153,7 @@ def main():
             imgList.clear()
             imgList = get_background()
             indexImg = len(imgList) - 1
+        
     cap.release()
     cv2.destroyAllWindows()
 
