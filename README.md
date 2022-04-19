@@ -9,9 +9,10 @@ This project is very simple so this is things that we made:
 
 - [1] Change Background color mode
 - [2] Change Background image mode
-- [3] Capture image
-- [4] Send line notification when capture image
-- [5] Upload Images
+- [3] Capture image by type in keyboard
+- [4] Capture image by making a fist
+- [5] Send line notification when capture image
+- [6] Upload Images
 
 
 ### Command
