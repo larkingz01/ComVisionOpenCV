@@ -1,8 +1,6 @@
 import os
 import cvzone
 import cv2
-import time
-from numpy import true_divide
 import requests
 from cv2 import WINDOW_NORMAL, line
 from cvzone.SelfiSegmentationModule import SelfiSegmentation
@@ -10,6 +8,7 @@ from cvzone.HandTrackingModule import HandDetector
 from datetime import date
 from tkinter import *
 from tkinter import filedialog
+
 
 def nothing(x):
     pass
@@ -33,11 +32,13 @@ def insert_img():
         ("all file", ".jpg")])
     if len(pic_path) > 0:
         img = cv2.imread(pic_path)
-        cv2.imwrite('BackgroundImages/'+str(len([i for i in os.listdir("BackgroundImages")]) + 1) + ".jpg",img)
+        cv2.imwrite('BackgroundImages/' +
+                    str(len([i for i in os.listdir("BackgroundImages")]) + 1) + ".jpg", img)
         root.destroy()
 
+
 def rescale_frame(frame, percent=50):
-    width = int(frame.shape[1] * percent / 100) 
+    width = int(frame.shape[1] * percent / 100)
     height = int(frame.shape[0] * percent / 100)
     dim = (width, height)
     return cv2.resize(frame, dim, interpolation=cv2.INTER_AREA)
@@ -56,13 +57,14 @@ def create_trackbar():
 
 def linenotify(message, path):
     url = 'https://notify-api.line.me/api/notify'
-    token = 'Dn7jX79Ak82Tl10zaS3V1OrMcZl5MJIPHZx9ymzfofo' 
+    token = 'Dn7jX79Ak82Tl10zaS3V1OrMcZl5MJIPHZx9ymzfofo'
     img = {'imageFile': open(path, 'rb')}
     data = {'message': message}
     headers = {'Authorization': 'Bearer ' + token}
     session = requests.Session()
     session_post = session.post(url, headers=headers, files=img, data=data)
     print(session_post.text)
+
 
 def captured(img_counter, img_out):
     today = date.today()
@@ -72,6 +74,8 @@ def captured(img_counter, img_out):
     cv2.imwrite('CapturedImages/'+img_name, img_out)
     print("{} is written!".format(img_name))
     linenotify(img_name+" is captured.", "CapturedImages/"+img_name)
+
+
 def main():
     finger_check = False
     img_counter = 1
@@ -152,9 +156,12 @@ def main():
             insert_img()
             imgList.clear()
             imgList = get_background()
+            if trackbar_check:
+                mode = not mode
             indexImg = len(imgList) - 1
-        
+
     cap.release()
     cv2.destroyAllWindows()
+
 
 main()
