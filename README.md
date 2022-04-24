@@ -13,6 +13,7 @@ This project is very simple so this is things that we made:
 - [4] Capture image by making a fist
 - [5] Send line notification when capture image
 - [6] Upload Images
+- [7] Input hex REG code
 
 
 ### Command
@@ -21,6 +22,7 @@ This project is very simple so this is things that we made:
 - [d] change to next background (background image mode only)
 - [m] swap mode
 - [i] upload user's image
+- [c] input hex RGB
 - [q] exit program
 
 

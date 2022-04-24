@@ -77,6 +77,25 @@ def captured(img_counter, img_out):
 
 
 def main():
+
+    def convert_code():
+        code = text.get()
+        color_input.destroy()
+        converter = []
+        if code.startswith("#"):
+            code = code.lstrip("#")
+            if len(code) == 3:
+                code = [i*2 for i in code]
+                code = "".join(code)
+            for i in (0, 2, 4):
+                decimal = int(code[i:i+2], 16)
+                converter.append(decimal)
+        cv2.setTrackbarPos('r', 'controls', int(converter[0]))
+        cv2.setTrackbarPos('g', 'controls', int(converter[1]))
+        cv2.setTrackbarPos('b', 'controls', int(converter[2]))
+        print('RGB =', converter)
+
+
     finger_check = False
     img_counter = 1
     mode = False
@@ -159,7 +178,17 @@ def main():
             if trackbar_check:
                 mode = not mode
             indexImg = len(imgList) - 1
-
+        if key_press == ord('c'):
+            color_input = Tk()
+            color_input.title("Input Custom Color")
+            color_input.geometry("300x100")
+            Label(color_input, text="Input custom color",
+                  font=("Modern", 10)).pack()
+            text = StringVar()
+            Entry(color_input, textvariable=text).pack()
+            Button(color_input, text="Enter", bg="red",
+                   fg="black", command=convert_code).pack()
+            color_input.mainloop()
     cap.release()
     cv2.destroyAllWindows()
 
